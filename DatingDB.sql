@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS public.my_contacts
     status character varying,
     interests character varying,
     seeking boolean,
-    prof_id integer,
+    prof_id integer REFERENCES profession (prof_id),
     zip_code integer,
     status_id integer,
     PRIMARY KEY (contact_id),
@@ -50,14 +50,14 @@ CREATE TABLE IF NOT EXISTS public.status
 
 CREATE TABLE IF NOT EXISTS public.contact_interest
 (
-    contact_id bigserial,
-    interest_id integer,
+    contact_id bigserial REFERENCES my_contacts (contact_id),
+    interest_id integer REFERENCES interests (interest_id),
     PRIMARY KEY (contact_id)
 );
 
 CREATE TABLE IF NOT EXISTS public.contact_seeking
 (
-    contact_id bigserial,
+    contact_id bigserial REFERENCES my_contacts (contact_id),
     seeking_id integer,
     PRIMARY KEY (contact_id)
 );
@@ -174,3 +174,9 @@ VALUES
     (4000,'Bela-Bela','Limpopo'),
     (0970,'Venda','Limpopo');
   
+
+INSERT INTO status (status)
+VALUES
+    ('Single'),
+    ('Dating'),
+    ('Complicated');
