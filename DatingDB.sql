@@ -134,8 +134,43 @@ ALTER TABLE IF EXISTS public.contact_seeking
 END;
 
 --INSERT values in tables
-INSERT INTO public.zip_code (zip_code, city, province)
+INSERT INTO profession (profession)
 VALUES
-    (1001, 'City1', 'Province1'),
-    (2002, 'City2', 'Province2'),
-    (3003, 'City3', 'Province3');
+    ('Software Developer'),
+    ('Advocate'),
+    ('Lecturer'),
+    ('Cashier'),
+    ('Financial Advisor'),
+    ('Architect'),
+    ('Civil Engineer'),
+    ('Administrator'),
+    ('Researcher'),
+    ('Clerk'),
+    ('Actuary'),
+    ('Chartered Accountant'),
+    ('Internal Auditor'),
+    ('Language Specialist'),
+    ('Psychologist'),
+    ('Medical Doctor');
+
+INSERT INTO zip_code (zip_code, city, province)
+VALUES
+    (4000,'Durban','KwaZulu Natal'),
+    (3200,'Pietermaritzburg','KwaZulu Natal'),
+    (2196,'Johannesburg ','Gauteng'),
+    (0157,'Pretoria','Gauteng'),
+    (7925,'Cape Town','Western Cape'),
+    (6530,'George','Western Cape'),
+    (6003,'Gqeberha','Eastern Cape'),
+    (5100,'Mthatha','Eastern Cape'),
+    (4000,'Durban','Northern Cape'),
+    (4000,'Durban','Northern Cape'),
+    (4000,'Durban','Mpumalanga'),
+    (4000,'Durban','Mpumalanga'),
+    (4000,'Durban','North West'),
+    (4000,'Durban','North West'),
+    (4000,'Durban','Free State'),
+    (4000,'Durban','Free State'),
+    (4000,'Durban','Limpopo'),
+    (4000,'Durban','Limpopo');
+  
