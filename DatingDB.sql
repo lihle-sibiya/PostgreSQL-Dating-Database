@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS public.my_contacts
     status character varying,
     interests character varying,
     seeking boolean,
-    prof_id integer REFERENCES profession (prof_id),
+    prof_id integer,
     zip_code integer,
     status_id integer,
     PRIMARY KEY (contact_id),
@@ -50,14 +50,14 @@ CREATE TABLE IF NOT EXISTS public.status
 
 CREATE TABLE IF NOT EXISTS public.contact_interest
 (
-    contact_id bigserial REFERENCES my_contacts (contact_id),
-    interest_id integer REFERENCES interests (interest_id),
+    contact_id bigserial,
+    interest_id integer,
     PRIMARY KEY (contact_id)
 );
 
 CREATE TABLE IF NOT EXISTS public.contact_seeking
 (
-    contact_id bigserial REFERENCES my_contacts (contact_id),
+    contact_id bigserial,
     seeking_id integer,
     PRIMARY KEY (contact_id)
 );
@@ -158,7 +158,7 @@ VALUES
     (4000,'Durban','KwaZulu Natal'),
     (3200,'Pietermaritzburg','KwaZulu Natal'),
     (2196,'Johannesburg ','Gauteng'),
-    (0157,'Pretoria','Gauteng'),
+    (1157,'Pretoria','Gauteng'),
     (7925,'Cape Town','Western Cape'),
     (6530,'George','Western Cape'),
     (6003,'Gqeberha','Eastern Cape'),
@@ -171,8 +171,8 @@ VALUES
     (2743,'Mahikeng','North West'),
     (9700,'Bethlehem ','Free State'),
     (9873,'Qwaqwa','Free State'),
-    (4000,'Bela-Bela','Limpopo'),
-    (0970,'Venda','Limpopo');
+    (1480,'Bela-Bela','Limpopo'),
+    (9970,'Venda','Limpopo');
   
 
 INSERT INTO status (status)
@@ -180,3 +180,84 @@ VALUES
     ('Single'),
     ('Dating'),
     ('Complicated');
+	
+ALTER TABLE interests
+ALTER COLUMN interest TYPE varchar (50);
+
+INSERT INTO interests (interest)
+VALUES
+    ('Reading'),
+    ('Hiking'),
+    ('Shark Diving'),
+    ('Scuba Diving'),
+    ('Swimming'),
+    ('Dancing'),
+    ('Water Polo'),
+    ('Music'),
+    ('Canoeing'),
+    ('Zip Lining'),
+    ('River Rafting'),
+    ('Painting'),
+    ('Yoga'),
+    ('Gym'),
+    ('Drawing');
+
+ALTER TABLE seeking
+ALTER COLUMN seeking TYPE varchar (50);
+
+INSERT INTO seeking (seeking)
+VALUES
+    ('Companionship'),
+    ('A best friend'),
+    ('A lifetine friend'),
+    ('Loyal spouse'),
+    ('Marriage partner'),
+    ('A partner in crime');
+
+--rename columns
+ALTER TABLE my_contacts
+RENAME COLUMN status TO status_;
+
+
+SELECT * FROM my_contacts
+SELECT * FROM profession
+SELECT * FROM zip_code
+SELECT * FROM status
+SELECT * FROM contact_interest
+SELECT * FROM contact_seeking
+SELECT * FROM interests
+SELECT * FROM seeking
+
+ALTER TABLE my_contacts
+ALTER COLUMN seeking TYPE varchar (50);
+
+INSERT INTO my_contacts (last_name, first_name, phone, email, gender, birthday, profession, city, province, interests, seeking )
+VALUES
+    ('Motladi', 'Seseko', 0785671234, 'seseko@abc.com', 'male', '01/08/1990', 'Advocate', 'Johannesburg', 'Gauteng', 'Swimming', 'Marriage Partner' );
+	
+	
+INSERT INTO my_contacts (status_, prof_id, zip_code, status_id)
+VALUES
+    ('Single', 34, 2196, 4 );	
+	
+	
+UPDATE my_contacts
+SET status_ = 'Single', prof_id = 34, zip_code = 2196, status_id = 4
+WHERE last_name = 'Motladi';
+
+ALTER TABLE my_contacts
+ALTER COLUMN phone TYPE varchar (50);
+
+UPDATE my_contacts
+SET phone = '0798672312'
+WHERE last_name = 'Motladi';
+
+SELECT * FROM my_contacts
+SELECT * FROM profession
+SELECT * FROM zip_code
+SELECT * FROM status
+SELECT * FROM contact_interest
+SELECT * FROM contact_seeking
+SELECT * FROM interests
+SELECT * FROM seeking
+
