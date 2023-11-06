@@ -261,7 +261,17 @@ SELECT * FROM contact_seeking
 SELECT * FROM interests
 SELECT * FROM seeking
 
+
 UPDATE my_contacts
-SET phone = last_name = 'Sally', first_name = 'Zulu', phone = '0828672311', email = 'seseko@abc.com', gender ='female', birthday = '20/09/1991', profession = 'Software Developer', city = 'Pretoria', province = 'Gauteng', status_ = 'Dating',  interests = 'Reading', seeking = 'Companionship', prof_id = 33, zip_code = 1157, status_id = 5
+SET last_name = 'Sally', first_name = 'Zulu', phone = '0828672311', email = 'seseko@abc.com', gender ='female', birthday = '20/09/1991', profession = 'Software Developer', city = 'Pretoria', province = 'Gauteng', status_ = 'Dating',  interests = 'Reading', seeking = 'Companionship', prof_id = 33, zip_code = 1157, status_id = 5
 WHERE contact_id = 2;
+
+UPDATE my_contacts
+SET email = 'sally@abc.com'
+WHERE contact_id = 2;
+
+INSERT INTO my_contacts (last_name, first_name, phone, email, gender, birthday, profession, city, province, status_, interests, seeking, prof_id, zip_code, status_id)
+VALUES
+    ('Single', 34, 2196, 4 );
+
 
