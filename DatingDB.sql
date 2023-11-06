@@ -270,21 +270,20 @@ UPDATE my_contacts
 SET email = 'sally@abc.com'
 WHERE contact_id = 2;
 
+
 INSERT INTO my_contacts (last_name, first_name, phone, email, gender, birthday, profession, city, province, status_, interests, seeking, prof_id, zip_code, status_id)
 VALUES
     ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/1992', 'Lecturer', 'Durban', 'KwaZulu Natal', 'Complicated', 'Hiking', 'A best friend', 35, 4000, 6),
-    ('Moreki', 'Theophilus', '0828745377', 'theophilus@abc.com', 'female', '18/11/1993', 'Cashier', 'Pietermaritzburg', 'KwaZulu Natal', 'Single', 'Shark Diving', 'A lifetine friend', 36, 3200, 4),
-    ('Moreki', 'Theophilus', '0838841423', 'theophilus@abc.com', 'male', '28/12/1994', 'Financial Advisor', 'Cape Town', 'Western Cape', 'Dating', 'Scuba Diving', 'Loyal spouse', 37, 7925, 5),
-    ('Moreki', 'Theophilus', '0848645679', 'theophilus@abc.com', 'female', '07/01/1989', 'Architect', 'George', 'Western Cape', 'Complicated', 'Dancing', 'Marriage partner', 38, 7930, 6),
-    ('Moreki', 'Theophilus', '0718646510', 'theophilus@abc.com', 'male', '27/02/1990', 'Civil Engineer', 'Gqeberha', 'Eastern Cape', 'Single', 'Water Polo', 'A partner in crime', 39, 6003, 4),
-    ('Moreki', 'Theophilus', '0728647302', 'theophilus@abc.com', 'female', '17/03/1987', 'Administrator', 'Mthatha', 'Eastern Cape', 'Dating', 'Music', 'Companionship', 40, 5100, 5),
-    ('Moreki', 'Theophilus', '0738640576', 'theophilus@abc.com', 'male', '04/04/1986', 'Researcher', 'Upington', 'Northern Cape', 'Complicated', 'Canoeing', 'A best friend', 41, 8800, 6),
-    ('Moreki', 'Theophilus', '0748646633', 'theophilus@abc.com', 'female', '14/05/1991', 'Clerk', 'Kimberley', 'Northern Cape', 'Single', 'Zip Lining', 'Loyal spouse', 42, 8301, 4),
-    ('Moreki', 'Theophilus', '0798645698', 'theophilus@abc.com', 'male', '24/06/1992', 'Actuary', 'Ermelo', 'Mpumalanga', 'Dating', 'River Rafting', 'Marriage partner', 43, 2351, 5),
-    ('Moreki', 'Theophilus', '0618645519', 'theophilus@abc.com', 'female', '09/07/1993', 'Chartered Accountant', 'Mbombela', 'Mpumalanga', 'Complicated', 'Painting', 'A partner in crime', 44, 1211, 6),
-    ('Moreki', 'Theophilus', '0658643456', 'theophilus@abc.com', 'male', '19/08/1989', 'Internal Auditor', 'Ottosdal', 'North West', 'Single', 'Yoga', 'A lifetine friend', 45, 2610, 4),
-    ('Moreki', 'Theophilus', '0668647654', 'theophilus@abc.com', 'female', '29/09/1988', 'Language Specialist', 'Qwaqwa', 'Free State', 'Dating', 'Gym', 'Companionship', 46, 9873, 5),
-    ('Moreki', 'Theophilus', '0678698761', 'theophilus@abc.com', 'male', '10/10/1992', 'Psychologist', 'Venda', 'Limpopo', 'Complicated', 'Drawing', 'A partner in crime', 47, 9970, 6),
-    ('Moreki', 'Theophilus', '0818609786', 'theophilus@abc.com', 'female', '11/11/1987', 'Medical Doctor', 'Bela-Bela', 'Limpopo', 'Single', 'Painting', 'Marriage partner', 48, 1480, 4);
-
-
+    ('Xulu', 'Noma', '0828745377', 'noma@abc.com', 'female', '18/11/1993', 'Cashier', 'Pietermaritzburg', 'KwaZulu Natal', 'Single', 'Shark Diving', 'A lifetine friend', 36, 3200, 4),
+    ('Smith', 'Lucino', '0838841423', 'lucino@abc.com', 'male', '28/12/1994', 'Financial Advisor', 'Cape Town', 'Western Cape', 'Dating', 'Scuba Diving', 'Loyal spouse', 37, 7925, 5),
+    ('Singapi', 'Chwayita', '0848645679', 'chwayita@abc.com', 'female', '07/01/1989', 'Architect', 'George', 'Western Cape', 'Complicated', 'Dancing', 'Marriage partner', 38, 6530, 6),
+    ('Janties', 'Sino', '0718646510', 'sino@abc.com', 'male', '27/02/1990', 'Civil Engineer', 'Gqeberha', 'Eastern Cape', 'Single', 'Water Polo', 'A partner in crime', 39, 6003, 4),
+    ('Nxedlane', 'Sima', '0728647302', 'sima@abc.com', 'female', '17/03/1987', 'Administrator', 'Mthatha', 'Eastern Cape', 'Dating', 'Music', 'Companionship', 40, 5100, 5),
+    ('Moyo', 'Naye', '0738640576', 'naye@abc.com', 'male', '04/04/1986', 'Researcher', 'Upington', 'Northern Cape', 'Complicated', 'Canoeing', 'A best friend', 41, 8800, 6),
+    ('Ndlela', 'Zodwa', '0748646633', 'zodwa@abc.com', 'female', '14/05/1991', 'Clerk', 'Kimberley', 'Northern Cape', 'Single', 'Zip Lining', 'Loyal spouse', 42, 8301, 4),
+    ('Green', 'Zeus', '0798645698', 'zeus@abc.com', 'male', '24/06/1992', 'Actuary', 'Ermelo', 'Mpumalanga', 'Dating', 'River Rafting', 'Marriage partner', 43, 2351, 5),
+    ('Pakisi', 'Ntsoaki', '0618645519', 'ntsoaki@abc.com', 'female', '09/07/1993', 'Chartered Accountant', 'Mbombela', 'Mpumalanga', 'Complicated', 'Painting', 'A partner in crime', 44, 1211, 6),
+    ('Good', 'Megan', '0658643456', 'megan@abc.com', 'male', '19/08/1989', 'Internal Auditor', 'Ottosdal', 'North West', 'Single', 'Yoga', 'A lifetine friend', 45, 2610, 4),
+    ('Jakes', 'TD', '0668647654', 'td@abc.com', 'female', '29/09/1988', 'Language Specialist', 'Qwaqwa', 'Free State', 'Dating', 'Gym', 'Companionship', 46, 9873, 5),
+    ('Vuitton', 'Louis', '0678698761', 'louis@abc.com', 'male', '10/10/1992', 'Psychologist', 'Venda', 'Limpopo', 'Complicated', 'Drawing', 'A partner in crime', 47, 9970, 6),
+    ('Gabbana', 'Dolce', '0818609786', 'dolce@abc.com', 'female', '11/11/1987', 'Medical Doctor', 'Bela-Bela', 'Limpopo', 'Single', 'Painting', 'Marriage partner', 48, 1480, 4);
