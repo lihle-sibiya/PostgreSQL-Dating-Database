@@ -262,6 +262,6 @@ SELECT * FROM interests
 SELECT * FROM seeking
 
 UPDATE my_contacts
-SET phone = '0798672312'
+SET phone = last_name, first_name, phone, email, gender, birthday, profession, city = 'Pretoria', province = 'Gauteng', status_,  interests, seeking, prof_id = 34, zip_code = 1157, status_id = 6
 WHERE contact_id = 2;
 
