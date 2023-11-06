@@ -272,19 +272,19 @@ WHERE contact_id = 2;
 
 INSERT INTO my_contacts (last_name, first_name, phone, email, gender, birthday, profession, city, province, status_, interests, seeking, prof_id, zip_code, status_id)
 VALUES
-    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Lecturer', 'Durban', 'KwaZulu Natal', 'Complicated', 'Hiking', 35, 4000, 6),
-    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Cashier', 'Pietermaritzburg', 'KwaZulu Natal', 'Complicated', 'Hiking', 36, 3200, 6),
-    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Financial Advisor', 'Cape Town', 'Western Cape', 'Complicated', 'Hiking', 37, 7925, 6),
-    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Lecturer', 'George', 'Western Cape', 'Complicated', 'Hiking', 38, 7930, 6),
-    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Lecturer', 'Gqeberha', 'Eastern Cape', 'Complicated', 'Hiking', 39, 6003, 6),
-    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Lecturer', 'Mthatha', 'Eastern Cape', 'Complicated', 'Hiking', 40, 5100, 6),
-    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Lecturer', 'Upington', 'Northern Cape', 'Complicated', 'Hiking', 41, 8800, 6),
-    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Lecturer', 'Kimberley', 'Northern Cape', 'Complicated', 'Hiking', 42, 8301, 6),
-    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Lecturer', 'Ermelo', 'Mpumalanga', 'Complicated', 'Hiking', 43, 2351, 6),
-    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Lecturer', 'Mbombela', 'Mpumalanga', 'Complicated', 'Hiking', 44, 1211, 6),
-    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Lecturer', 'Ottosdal', 'North West', 'Complicated', 'Hiking', 45, 2610, 6),
-    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Lecturer', 'Qwaqwa', 'Free State', 'Complicated', 'Hiking', 46, 9873, 6),
-    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Lecturer', 'Venda', 'Limpopo', 'Complicated', 'Hiking', 47, 9970, 6),
-    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Lecturer', 'Bela-Bela', 'Limpopo', 'Complicated', 'Hiking', 48, 1480, 6);
+    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Lecturer', 'Durban', 'KwaZulu Natal', 'Complicated', 'Hiking', 'A best friend', 35, 4000, 6),
+    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'female', '08/10/2000', 'Cashier', 'Pietermaritzburg', 'KwaZulu Natal', 'Single', 'Shark Diving', 'A lifetine friend', 36, 3200, 4),
+    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Financial Advisor', 'Cape Town', 'Western Cape', 'Dating', 'Scuba Diving', 'Loyal spouse', 37, 7925, 5),
+    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'female', '08/10/2000', 'Architect', 'George', 'Western Cape', 'Complicated', 'Dancing', 'Marriage partner', 38, 7930, 6),
+    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Civil Engineer', 'Gqeberha', 'Eastern Cape', 'Single', 'Water Polo', 'A partner in crime', 39, 6003, 4),
+    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'female', '08/10/2000', 'Administrator', 'Mthatha', 'Eastern Cape', 'Dating', 'Music', 'Companionship', 40, 5100, 5),
+    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Researcher', 'Upington', 'Northern Cape', 'Complicated', 'Canoeing', 'A best friend', 41, 8800, 6),
+    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'female', '08/10/2000', 'Clerk', 'Kimberley', 'Northern Cape', 'Single', 'Zip Lining', 'Loyal spouse', 42, 8301, 4),
+    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Actuary', 'Ermelo', 'Mpumalanga', 'Dating', 'River Rafting', 'Marriage partner', 43, 2351, 5),
+    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'female', '08/10/2000', 'Chartered Accountant', 'Mbombela', 'Mpumalanga', 'Complicated', 'Painting', 'A partner in crime', 44, 1211, 6),
+    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Internal Auditor', 'Ottosdal', 'North West', 'Single', 'Yoga', 'A lifetine friend', 45, 2610, 4),
+    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'female', '08/10/2000', 'Language Specialist', 'Qwaqwa', 'Free State', 'Dating', 'Gym', 'Companionship', 46, 9873, 5),
+    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'male', '08/10/2000', 'Psychologist', 'Venda', 'Limpopo', 'Complicated', 'Drawing', 'A partner in crime', 47, 9970, 6),
+    ('Moreki', 'Theophilus', '0818645310', 'theophilus@abc.com', 'female', '08/10/2000', 'Medical Doctor', 'Bela-Bela', 'Limpopo', 'Single', 'Painting', 'Marriage partner', 48, 1480, 4);
 
 
