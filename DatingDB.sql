@@ -261,3 +261,7 @@ SELECT * FROM contact_seeking
 SELECT * FROM interests
 SELECT * FROM seeking
 
+UPDATE my_contacts
+SET phone = '0798672312'
+WHERE contact_id = 2;
+
