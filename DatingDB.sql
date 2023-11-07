@@ -50,16 +50,14 @@ CREATE TABLE IF NOT EXISTS public.status
 
 CREATE TABLE IF NOT EXISTS public.contact_interest
 (
-    contact_id bigserial,
-    interest_id integer,
-    PRIMARY KEY (contact_id)
+    contact_id integer,
+    interest_id integer
 );
 
 CREATE TABLE IF NOT EXISTS public.contact_seeking
 (
-    contact_id bigserial,
-    seeking_id integer,
-    PRIMARY KEY (contact_id)
+    contact_id integer,
+    seeking_id integer
 );
 
 CREATE TABLE IF NOT EXISTS public.interests
@@ -287,3 +285,26 @@ VALUES
     ('Jakes', 'TD', '0668647654', 'td@abc.com', 'female', '29/09/1988', 'Language Specialist', 'Qwaqwa', 'Free State', 'Dating', 'Gym', 'Companionship', 46, 9873, 5),
     ('Vuitton', 'Louis', '0678698761', 'louis@abc.com', 'male', '10/10/1992', 'Psychologist', 'Venda', 'Limpopo', 'Complicated', 'Drawing', 'A partner in crime', 47, 9970, 6),
     ('Gabbana', 'Dolce', '0818609786', 'dolce@abc.com', 'female', '11/11/1987', 'Medical Doctor', 'Bela-Bela', 'Limpopo', 'Single', 'Painting', 'Marriage partner', 48, 1480, 4);
+
+ALTER TABLE my_contacts
+RENAME COLUMN status_ to "status";
+
+
+INSERT INTO contact_interest(contact_id, interest_id)
+VALUES (1),
+       (2),
+       (17),
+       (18),
+       (19),
+       (20),
+       (21),
+       (22),
+       (23),
+       (24),
+       (25),
+       (26),
+       (27),
+       (28),
+       (29),
+       (30);
+
