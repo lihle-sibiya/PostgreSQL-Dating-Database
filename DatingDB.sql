@@ -342,7 +342,7 @@ SELECT
   z.city,
   z.province,
   mc.status,
-  i.interest,
+  i.interest AS interests,
   s.seeking
 FROM
   my_contacts mc
