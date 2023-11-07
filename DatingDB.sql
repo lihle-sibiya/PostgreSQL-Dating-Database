@@ -291,20 +291,57 @@ RENAME COLUMN status_ to "status";
 
 
 INSERT INTO contact_interest(contact_id, interest_id)
-VALUES (1),
-       (2),
-       (17),
-       (18),
-       (19),
-       (20),
-       (21),
-       (22),
-       (23),
-       (24),
-       (25),
-       (26),
-       (27),
-       (28),
-       (29),
-       (30);
+VALUES (1, 1),
+       (2, 2),
+       (17, 3),
+       (18, 4),
+       (19, 5),
+       (20, 6),
+       (21, 7),
+       (22, 8),
+       (23, 9),
+       (24, 10),
+       (25, 11),
+       (26, 12),
+       (27, 13),
+       (28, 14),
+       (29, 15),
+       (30, 16);
 
+INSERT INTO contact_seeking (contact_id, seeking_id)
+VALUES (1, 1),
+       (2, 2),
+       (17, 3),
+       (18, 4),
+       (19, 5),
+       (20, 6),
+       (21, 1),
+       (22, 2),
+       (23, 3),
+       (24, 4),
+       (25, 5),
+       (26, 6),
+       (27, 1),
+       (28, 2),
+       (29, 3),
+       (30, 4);
+
+SELECT * FROM my_contacts
+SELECT * FROM profession
+SELECT * FROM zip_code
+SELECT * FROM status
+SELECT * FROM contact_interest
+SELECT * FROM contact_seeking
+SELECT * FROM interests
+SELECT * FROM seeking
+
+
+SELECT
+    mc.city,
+    mc.province
+FROM my_contacts mc
+LEFT JOIN profession p ON mc.profession = p.profession
+LEFT JOIN zip_code z ON mc.zip_code = z.zip_code
+LEFT JOIN "status" s ON mc.status = s.status
+LEFT JOIN interests i ON mc.interests = i.interest
+LEFT JOIN seeking se ON mc.seeking = se.seeking;
