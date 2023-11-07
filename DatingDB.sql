@@ -50,13 +50,13 @@ CREATE TABLE IF NOT EXISTS public.status
 
 CREATE TABLE IF NOT EXISTS public.contact_interest
 (
-    contact_id integer,
+    contact_id bigserial,
     interest_id integer
 );
 
 CREATE TABLE IF NOT EXISTS public.contact_seeking
 (
-    contact_id integer,
+    contact_id bigserial,
     seeking_id integer
 );
 
@@ -337,11 +337,17 @@ SELECT * FROM seeking
 
 
 SELECT
-    mc.city,
-    mc.province
-FROM my_contacts mc
-LEFT JOIN profession p ON mc.profession = p.profession
+  mc.profession,
+  mc.zip_code,
+  z.city,
+  z.province,
+  mc.status,
+  i.interest,
+  s.seeking
+FROM
+  my_contacts mc
 LEFT JOIN zip_code z ON mc.zip_code = z.zip_code
-LEFT JOIN "status" s ON mc.status = s.status
-LEFT JOIN interests i ON mc.interests = i.interest
-LEFT JOIN seeking se ON mc.seeking = se.seeking;
+LEFT JOIN contact_interest ci ON mc.contact_id = ci.contact_id
+LEFT JOIN interests i ON ci.interest_id = i.interest_id
+LEFT JOIN contact_seeking cs ON mc.contact_id = cs.contact_id
+LEFT JOIN seeking s ON cs.seeking_id = s.seeking_id;
